@@ -1,6 +1,6 @@
 import React from "react";
 import EventContent from "./EventContent";
-import EventFooter from "./EventFooter";
+import EventFooter from "./EventFooter/EventFooter";
 import Time from "./Time";
 import styles from "./event.module.css";
 const Event = (state) => {
@@ -8,7 +8,7 @@ const Event = (state) => {
     <div className={styles.EventMain}>
       <Time />
       <EventContent state={state} />
-      {state[1]?.length && <EventFooter state={state} />}
+      {state[1].length && <EventFooter state={state} />}
     </div>
   );
 };

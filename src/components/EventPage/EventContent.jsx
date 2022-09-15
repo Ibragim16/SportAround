@@ -12,8 +12,8 @@ import GoesNow from "./GoesNow";
 
 const EventContent = ({ eventsSpisok }) => {
   const currenEventTime =
-    Date.parse(eventsSpisok[0]?.dt_start) / 1000 > Math.floor(Date.now() / 1000)
-      ? (Date.parse(eventsSpisok[0]?.dt_start) / 1000) %
+    Date.parse(eventsSpisok[0].dt_start) / 1000 > Math.floor(Date.now() / 1000)
+      ? (Date.parse(eventsSpisok[0].dt_start) / 1000) %
         Math.floor(Date.now() / 1000)
       : 0;
 
@@ -25,9 +25,9 @@ const EventContent = ({ eventsSpisok }) => {
   //Функция для подсчета оставшегося времени до эвента
   const mathTime = () => {
     let currenTime =
-      Date.parse(eventsSpisok[0]?.dt_start) / 1000 >
+      Date.parse(eventsSpisok[0].dt_start) / 1000 >
       Math.floor(Date.now() / 1000)
-        ? (Date.parse(eventsSpisok[0]?.dt_start) / 1000) %
+        ? (Date.parse(eventsSpisok[0].dt_start) / 1000) %
           Math.floor(Date.now() / 1000)
         : 0;
 
@@ -50,7 +50,7 @@ const EventContent = ({ eventsSpisok }) => {
   return (
     <div className={style.mainContent}>
       <div className={style.eventDay}>{viewDate(eventsSpisok)}</div>
-      <h3 className={style.eventName}>{eventsSpisok[0]?.title}</h3>
+      <h3 className={style.eventName}>{eventsSpisok[0].title}</h3>
       {!currenEventTime ? (
         <GoesNow />
       ) : (

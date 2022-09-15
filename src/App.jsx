@@ -1,14 +1,16 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Event from "./components/HasEvent/Event";
-import TimePage from "./components/main/TimePage";
+import Event from "./components/EventPage/EventPage";
+import TimePage from "./components/TimePage/TimePage";
 
 function App() {
-  const [state, setState] = useState(null);
+  const [state, setState] = useState([]);
+  const [error, setError] = useState(null);
+
 
   useEffect(() => {
     setInterval(() => {
-      fetch("https://beta.sosportom.ru/graphql/", {
+      fetch("https://beta.sosportom.ru/graphqdl/", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -22,13 +24,27 @@ function App() {
         .then((res) => res.json())
         .then((data) => {
           setState(() => data.data.videostandEvents.current_and_upcoming);
+        })
+        .catch((err)=>{
+          setError(()=> err.toString())
         });
-    }, 60000);
+    }, 6000);
+    console.log(error)
+
   }, []);
 
+  if(error !== null){
+    return(
+    <div className="App">
+      <div className="errorBox">
+      <h4 className="error">{error}</h4>
+      </div>
+    </div>
+    )
+  }
   return (
     <div className="App">
-      {state?.length ? <Event eventsSpisok={state} /> : <TimePage />}
+      {state.length ? <Event eventsSpisok={state} /> : <TimePage />}
     </div>
   );
 }
