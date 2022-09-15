@@ -7,6 +7,10 @@
     position: relative;
 }
 
+.EventMain {
+    width: "100%";
+}
+
 .circularBlock {
     width: 160px;
 }

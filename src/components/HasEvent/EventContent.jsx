@@ -6,10 +6,11 @@ import {
   buildStyles,
 } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { viewDate } from "../../modules/viewDate";
 import style from "./event.module.css";
 import GoesNow from "./GoesNow";
 
-const EventContent = (eventsSpisok) => {
+const EventContent = ({ eventsSpisok }) => {
   const currenEventTime =
     Date.parse(eventsSpisok[0]?.dt_start) / 1000 > Math.floor(Date.now() / 1000)
       ? (Date.parse(eventsSpisok[0]?.dt_start) / 1000) %
@@ -36,8 +37,8 @@ const EventContent = (eventsSpisok) => {
     setSecond(() => Math.floor(currenTime % 60));
   };
   useEffect(() => {
-    const interval =setInterval(mathTime, 1000);
-    return ()=> clearInterval(interval)
+    const interval = setInterval(mathTime, 1000);
+    return () => clearInterval(interval);
   }, []);
 
   // подсчет процентов заполнения CircularProgressBar
@@ -46,27 +47,9 @@ const EventContent = (eventsSpisok) => {
   let minuteProcent = (minute / 60) * 100;
   let hourProcent = (hour / 24) * 100;
 
-  // функция для правильного отображения дат проведения мероприятий
-  function viewDate() {
-    const dateStart = new Date(eventsSpisok[0]?.dt_start)
-      .toLocaleDateString({ year: "numeric", month: "numeric", day: "numeric" })
-      .split(".");
-    const dateEnd = new Date(eventsSpisok[0]?.dt_end)
-      .toLocaleDateString({ year: "numeric", month: "numeric", day: "numeric" })
-      .split(".");
-    if (dateStart[2] - dateEnd[2] < 0) {
-      return `${dateStart[0]}.${dateStart[1]}.${dateStart[2]}-${dateEnd[0]}.${dateEnd[1]}.${dateEnd[2]}`;
-    }
-    if (dateStart[1] - dateEnd[1] < 0) {
-      return `${dateStart[0]}.${dateStart[1]}-${dateEnd[0]}.${dateEnd[1]}.${dateStart[2]}`;
-    }
-    if (dateStart[0] - dateEnd[0] < 0) {
-      return `${dateStart[0]}-${dateEnd[0]}.${dateEnd[1]}.${dateStart[2]}`;
-    }
-  }
   return (
     <div className={style.mainContent}>
-      <div className={style.eventDay}>{viewDate()}</div>
+      <div className={style.eventDay}>{viewDate(eventsSpisok)}</div>
       <h3 className={style.eventName}>{eventsSpisok[0]?.title}</h3>
       {!currenEventTime ? (
         <GoesNow />
