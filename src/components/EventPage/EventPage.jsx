@@ -3,12 +3,12 @@ import EventContent from "./EventContent";
 import EventFooter from "./EventFooter/EventFooter";
 import Time from "./Time";
 import styles from "./event.module.css";
-const Event = (state) => {
+const Event = ({eventsSpisok}) => {
   return (
     <div className={styles.EventMain}>
       <Time />
-      <EventContent state={state} />
-      {state[1].length && <EventFooter state={state} />}
+      <EventContent eventsSpisok={eventsSpisok} />
+      {eventsSpisok[1] && <EventFooter eventsSpisok={eventsSpisok} />}
     </div>
   );
 };
