@@ -10,4 +10,4 @@ const TimePage = () => {
     );
 };
 
-export default TimePage;
+export default React.memo(TimePage);
