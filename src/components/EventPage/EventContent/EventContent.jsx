@@ -2,10 +2,10 @@ import { memo } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import "react-circular-progressbar/dist/styles.css";
-import { viewDate } from "../../modules/viewDate";
-import style from "./event.module.css";
-import GoesNow from "./GoesNow";
-import ProgressBar from "./ProgressBar/ProgressBar";
+import { viewDate } from "../../../modules/viewDate";
+import style from "./eventContent.module.css";
+import GoesNow from "../GoesNowModal";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 const EventContent = ({ eventsSpisok }) => {
   const currenEventTime =
