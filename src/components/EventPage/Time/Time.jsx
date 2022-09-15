@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import styles from "./event.module.css";
+import styles from "./time.module.css";
 const Time = () => {
   const date = new Date();
   const options = {
@@ -23,7 +23,7 @@ const Time = () => {
   }, []);
   useEffect(() => {
     const interval = setInterval(timeCurrent, 1000);
-    return ()=> clearInterval(interval)
+    return () => clearInterval(interval);
   }, []);
 
   return (

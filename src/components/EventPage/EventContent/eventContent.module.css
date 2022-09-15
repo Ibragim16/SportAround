@@ -1,0 +1,61 @@
+.mainContent {
+    width: 1920px;
+    height: 459px;
+    padding: 50px 0;
+    margin: auto;
+    background-color: #1E3465;
+    position: relative;
+}
+
+.EventMain {
+    width: "100%";
+}
+
+.circularBlock {
+    width: 160px;
+}
+
+.circularBlocks {
+    width: 762px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 240px;
+    left: 579px;
+}
+
+.eventDay {
+    color: #98ABBE;
+    font-family: OpenSans;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 2.03px;
+    line-height: 23px;
+    width: 295px;
+    text-align: center;
+    margin: auto;
+}
+
+.eventName {
+    color: #FFFFFF;
+    font-family: OpenSans;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 48px;
+    width: 1169px;
+    text-align: center;
+    margin: 12px auto 0;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}

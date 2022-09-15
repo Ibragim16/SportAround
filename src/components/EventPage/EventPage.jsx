@@ -1,7 +1,7 @@
 import React from "react";
-import EventContent from "./EventContent";
+import EventContent from "./EventContent/EventContent";
 import EventFooter from "./EventFooter/EventFooter";
-import Time from "./Time";
+import Time from "./Time/Time";
 import styles from "./event.module.css";
 const Event = ({eventsSpisok}) => {
   return (
