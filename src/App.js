@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useMemo, useState } from "react";
+import "./App.css";
+import Event from "./components/HasEvent/Event";
+import TimePage from "./components/main/TimePage";
 
 function App() {
+  const [state, setState] = useState();
+  
+  useEffect(() => {
+    setInterval(()=>{
+      fetch("https://beta.sosportom.ru/graphql/", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({
+          query:
+            "query videostandEvents ($videostand_id: ID!) { videostandEvents(videostand_id: $videostand_id) { current_and_upcoming { title, is_main, dt_start, dt_end, dt_create }, finished { title, is_main, dt_start, dt_end, dt_create } } }",
+          variables: { videostand_id: "6" },
+        }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          setState(()=> data.data.videostandEvents.current_and_upcoming)
+        });
+    },60000)
+   
+  }, []);
+  if (state?.length) {
+    return (
+      <div className="App">
+        <Event state={state} />
+      </div>
+    );
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TimePage />
     </div>
   );
 }

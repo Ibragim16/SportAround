@@ -1,0 +1,151 @@
+.mainContent {
+    width: 1920px;
+    height: 459px;
+    padding: 50px 0;
+    margin: auto;
+    background-color: #1E3465;
+    position: relative;
+}
+
+.circularBlock {
+    width: 160px;
+}
+
+.circularBlocks {
+    width: 762px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 240px;
+    left: 579px;
+}
+
+.Time {
+    width: 283px;
+    margin: auto;
+}
+
+.Date {
+    color: #FFFFFF;
+    font-family: OpenSans;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 26px;
+    text-align: center;
+    margin-bottom: 85px;
+}
+
+.hours {
+    width: 283px;
+    font-size: 96px;
+    color: #FFFFFF;
+}
+
+.eventDay {
+    color: #98ABBE;
+    font-family: OpenSans;
+    font-size: 19px;
+    letter-spacing: 2.03px;
+    line-height: 23px;
+    width: 295px;
+    text-align: center;
+    margin: auto;
+}
+
+.eventName {
+    color: #FFFFFF;
+    font-family: OpenSans;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 48px;
+    width: 1169px;
+    text-align: center;
+    margin: 12px auto 0;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 2;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.EventFooter {
+    margin-top: 118px;
+    text-align: center;
+}
+
+.nextEventName {
+    width: 823px;
+    margin: auto;
+    color: #FFFFFF;
+    font-family: OpenSans;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -ms-line-clamp: 1;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    display: box;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+}
+
+.circleContent {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.circleContent h3 {
+    font-size: 50px;
+}
+
+.GoesNow {
+    background-color: #3D8D44;
+    border: 1px solid #2C7C33;
+    border-radius: 15px;
+    width: 451px;
+    height: 107px;
+    margin: 137px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.GoesNow span {
+    color: #FFFFFF;
+    font-family: OpenSans;
+    font-size: 32px;
+    line-height: 38px;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+.timeIcon {
+    width: 66px;
+    height: 62px;
+    overflow: hidden;
+    transform: rotateZ(180deg);
+    margin-left: 24px;
+}
+
+.timeIcon img {
+    width: auto;
+    height: 100%;
+}

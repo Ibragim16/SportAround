@@ -1,0 +1,36 @@
+.block{
+    width: 383px;
+    height: 297px;
+    border-radius: 10px;
+    background-color: #707d99;
+}
+.HoursMain{
+    height: 50%;
+    padding: 10px 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    background-color: #1F3768;
+}
+.DaysMain{
+    height: 50%;
+    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #172A52;
+}
+.hours{
+    width: 283px;
+    font-size: 96px;
+    color: #FFFFFF;
+}
+.days{
+    width: 283px;
+    text-align: center;
+    font-size: 37px;
+    color: #FFFFFF;
+}
