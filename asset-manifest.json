@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SportAround/static/css/main.9b775350.css",
+    "main.js": "/SportAround/static/js/main.06fa25ea.js",
+    "index.html": "/SportAround/index.html",
+    "main.9b775350.css.map": "/SportAround/static/css/main.9b775350.css.map",
+    "main.06fa25ea.js.map": "/SportAround/static/js/main.06fa25ea.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9b775350.css",
+    "static/js/main.06fa25ea.js"
+  ]
+}
