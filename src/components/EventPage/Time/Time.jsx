@@ -12,6 +12,7 @@ const Time = () => {
       month: "long",
     })}·${date.toLocaleString("ru-RU", { weekday: "long" })}`
   );
+
   const timeCurrent = useCallback(() => {
     setTime(() => new Date().toLocaleString("ru-RU", options));
     setDay(
@@ -21,6 +22,7 @@ const Time = () => {
         })}·${new Date().toLocaleString("ru-RU", { weekday: "long" })}`
     );
   }, []);
+
   useEffect(() => {
     const interval = setInterval(timeCurrent, 1000);
     return () => clearInterval(interval);

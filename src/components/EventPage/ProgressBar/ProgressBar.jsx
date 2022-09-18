@@ -4,6 +4,7 @@ import {
   CircularProgressbarWithChildren,
 } from "react-circular-progressbar";
 import styles from "./progressBar.module.css";
+
 const ProgressBar = ({ props }) => {
   return (
     <div>

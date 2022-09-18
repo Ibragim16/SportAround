@@ -9,8 +9,8 @@ import ProgressBar from "../ProgressBar/ProgressBar";
 
 const EventContent = ({ eventsSpisok }) => {
   const currenEventTime =
-    Date.parse(eventsSpisok[0].dt_start) / 1000 > Math.floor(Date.now() / 1000)
-      ? (Date.parse(eventsSpisok[0].dt_start) / 1000) %
+    Date.parse(eventsSpisok[0]?.dt_start) / 1000 > Math.floor(Date.now() / 1000)
+      ? (Date.parse(eventsSpisok[0]?.dt_start) / 1000) %
         Math.floor(Date.now() / 1000)
       : 0;
 
@@ -22,9 +22,9 @@ const EventContent = ({ eventsSpisok }) => {
   //Функция для подсчета оставшегося времени до эвента
   const mathTime = () => {
     let currenTime =
-      Date.parse(eventsSpisok[0].dt_start) / 1000 >
+      Date.parse(eventsSpisok[0]?.dt_start) / 1000 >
       Math.floor(Date.now() / 1000)
-        ? (Date.parse(eventsSpisok[0].dt_start) / 1000) %
+        ? (Date.parse(eventsSpisok[0]?.dt_start) / 1000) %
           Math.floor(Date.now() / 1000)
         : 0;
 
@@ -57,7 +57,7 @@ const EventContent = ({ eventsSpisok }) => {
         <GoesNow />
       ) : (
         <div className={style.circularBlocks}>
-          {array.map((item,ind) => {
+          {array.map((item, ind) => {
             return (
               <div key={ind} className={style.circularBlock}>
                 <ProgressBar props={item} />
