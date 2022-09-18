@@ -29,6 +29,7 @@ function App() {
         .catch((err)=>{
           setError(()=> err.toString())
         });
+        console.log(eventsSpisok)
     }, 6000);
     console.log(error)
 
