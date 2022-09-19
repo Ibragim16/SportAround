@@ -1,13 +1,17 @@
 import { memo } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import "react-circular-progressbar/dist/styles.css";
 import { viewDate } from "../../../modules/viewDate";
 import style from "./eventContent.module.css";
 import GoesNow from "../GoesNowModal";
 import ProgressBar from "../ProgressBar/ProgressBar";
+import Loader from "../../Loader/Loader";
 
 const EventContent = ({ eventsSpisok }) => {
+  const { loadingFetch } = useSelector((state) => state.reducer);
+
   const currenEventTime =
     Date.parse(eventsSpisok[0]?.dt_start) > Date.now()
       ? Math.floor((Date.parse(eventsSpisok[0]?.dt_start) - Date.now()) / 1000)
@@ -64,6 +68,11 @@ const EventContent = ({ eventsSpisok }) => {
               </div>
             );
           })}
+        </div>
+      )}
+      {loadingFetch && (
+        <div className={style.loaderBox}>
+          <Loader />
         </div>
       )}
     </div>

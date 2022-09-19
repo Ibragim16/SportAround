@@ -57,3 +57,8 @@
     -webkit-box-orient: vertical;
     box-orient: vertical;
 }
+.loaderBox{
+    position:absolute;
+    top:90px;
+    left: 50%
+}

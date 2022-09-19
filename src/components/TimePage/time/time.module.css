@@ -3,6 +3,7 @@
     height: 297px;
     border-radius: 10px;
     background-color: #707d99;
+    position: relative;
 }
 .HoursMain{
     height: 50%;
@@ -35,4 +36,9 @@
     text-align: center;
     font-size: 37px;
     color: #FFFFFF;
+}
+.loaderBox{
+    position:absolute;
+    top:-80px;
+    right: 15px;
 }
