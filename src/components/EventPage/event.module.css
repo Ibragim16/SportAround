@@ -1,13 +1,12 @@
-
-
-
 .GoesNow {
     background-color: #3D8D44;
     border: 1px solid #2C7C33;
     border-radius: 15px;
     width: 451px;
     height: 107px;
-    margin: 137px auto 0;
+    position: absolute;
+    top: 280px;
+    left: 734px;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -14,4 +14,7 @@ export const viewDate = (event) => {
   if (dateStart[0] - dateEnd[0] < 0) {
     return `${dateStart[0]}-${dateEnd[0]}.${dateEnd[1]}.${dateStart[2]}`;
   }
+  if (dateStart[0] - dateEnd[0] === 0) {
+    return `${dateStart[0]}.${dateEnd[1]}.${dateStart[2]}`;
+  }
 };
