@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 const initialState = {
   event: [],
-
   error: null,
   loadingFetch: false,
 };
@@ -10,7 +9,7 @@ export const fetchEvents = createAsyncThunk(
   "fetch/events",
   async (_, thunkAPI) => {
     try {
-      const date = await fetch("https://beta.sosportom.ru/graphqdl/", {
+      const date = await fetch("https://beta.sosportom.ru/graphql/", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -21,8 +20,7 @@ export const fetchEvents = createAsyncThunk(
           variables: { videostand_id: "6" },
         }),
       });
-      const res = date.json();
-
+      const res = await date.json();
       return thunkAPI.fulfillWithValue(
         res.data.videostandEvents.current_and_upcoming
       );

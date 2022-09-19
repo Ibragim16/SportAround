@@ -1,4 +1,4 @@
-import { useEffect} from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import styles from "./app.module.css";
@@ -9,7 +9,6 @@ import { fetchEvents } from "../redux/features/event";
 
 function App() {
   const dispatch = useDispatch();
-
   const { event, error } = useSelector((state) => state.reducer);
 
   useEffect(() => {
