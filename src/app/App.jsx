@@ -30,7 +30,7 @@ function App() {
         <Event eventsSpisok={event} error={error} />
       ) : (
         <TimePage />
-      )}
+      )} 
     </div>
   );
 }
