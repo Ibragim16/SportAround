@@ -55,7 +55,7 @@ const EventContent = ({ eventsSpisok }) => {
   ];
   return (
     <div className={style.mainContent}>
-      <div className={style.eventDay}>{viewDate(eventsSpisok)}</div>
+      <div className={style.eventDay}>{viewDate(eventsSpisok[0])}</div>
       <h3 className={style.eventName}>{eventsSpisok[0].title}</h3>
       {!currenEventTime ? (
         <GoesNow />
