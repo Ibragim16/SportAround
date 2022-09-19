@@ -13,9 +13,10 @@ function App() {
   const { event, error } = useSelector((state) => state.reducer);
 
   useEffect(() => {
+    dispatch(fetchEvents());
     const interval = setInterval(() => {
       dispatch(fetchEvents());
-    }, 10000);
+    }, 60000);
     return () => clearInterval(interval);
   }, []);
 
