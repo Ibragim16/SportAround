@@ -10,7 +10,6 @@ import { fetchEvents } from "../redux/features/event";
 function App() {
   const dispatch = useDispatch();
   const { event, error } = useSelector((state) => state.reducer);
-  console.log(event)
   useEffect(() => {
     dispatch(fetchEvents());
     const interval = setInterval(() => {
@@ -30,7 +29,7 @@ function App() {
         <Event eventsSpisok={event} error={error} />
       ) : (
         <TimePage />
-      )} 
+      )}
     </div>
   );
 }
