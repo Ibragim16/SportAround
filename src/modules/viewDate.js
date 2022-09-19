@@ -1,8 +1,8 @@
-export const viewDate = (eventsSpisok) => {
-  const dateStart = new Date(eventsSpisok[1]?.dt_start)
+export const viewDate = (event) => {
+  const dateStart = new Date(event.dt_start)
     .toLocaleDateString({ year: "numeric", month: "numeric", day: "numeric" })
     .split(".");
-  const dateEnd = new Date(eventsSpisok[1]?.dt_end)
+  const dateEnd = new Date(event.dt_end)
     .toLocaleDateString({ year: "numeric", month: "numeric", day: "numeric" })
     .split(".");
   if (dateStart[2] - dateEnd[2] < 0) {
