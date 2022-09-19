@@ -3,7 +3,7 @@ import EventContent from "./EventContent/EventContent";
 import EventFooter from "./EventFooter/EventFooter";
 import Time from "./Time/Time";
 import styles from "./event.module.css";
-const Event = ({eventsSpisok}) => {
+const Event = ({ eventsSpisok }) => {
   return (
     <div className={styles.EventMain}>
       <Time />
