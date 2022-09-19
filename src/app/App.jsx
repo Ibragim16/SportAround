@@ -11,7 +11,7 @@ function App() {
   const dispatch = useDispatch();
 
   const { event, error } = useSelector((state) => state.reducer);
-
+  console.log(event)
   useEffect(() => {
     dispatch(fetchEvents());
     const interval = setInterval(() => {
