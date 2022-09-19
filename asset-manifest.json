@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/SportAround/static/css/main.ed9cb0df.css",
-    "main.js": "/SportAround/static/js/main.84f78398.js",
+    "main.css": "/SportAround/static/css/main.cad65756.css",
+    "main.js": "/SportAround/static/js/main.2680a128.js",
     "index.html": "/SportAround/index.html",
-    "main.ed9cb0df.css.map": "/SportAround/static/css/main.ed9cb0df.css.map",
-    "main.84f78398.js.map": "/SportAround/static/js/main.84f78398.js.map"
+    "main.cad65756.css.map": "/SportAround/static/css/main.cad65756.css.map",
+    "main.2680a128.js.map": "/SportAround/static/js/main.2680a128.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed9cb0df.css",
-    "static/js/main.84f78398.js"
+    "static/css/main.cad65756.css",
+    "static/js/main.2680a128.js"
   ]
 }
